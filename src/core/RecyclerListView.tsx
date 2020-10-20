@@ -219,7 +219,7 @@ export default class RecyclerListView extends React.Component<RecyclerListViewPr
     }
 
     public componentWillMount(): void {
-				console.log(`RecyclerListView Hack componentWillMount`);
+				console.log(`RecyclerListView Hack componentWillMount two`);
 				if (this.props.contextProvider) {
             const uniqueKey = this.props.contextProvider.getUniqueKey();
             if (uniqueKey) {
