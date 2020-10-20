@@ -199,6 +199,7 @@ export default class RecyclerListView extends React.Component<RecyclerListViewPr
     }
 
     public componentWillUnmount(): void {
+				console.log(`RecyclerListView Hack componentWillUnmount`);
         if (this.props.contextProvider) {
             const uniqueKey = this.props.contextProvider.getUniqueKey();
             if (uniqueKey) {
@@ -218,7 +219,8 @@ export default class RecyclerListView extends React.Component<RecyclerListViewPr
     }
 
     public componentWillMount(): void {
-        if (this.props.contextProvider) {
+				console.log(`RecyclerListView Hack componentWillMount`);
+				if (this.props.contextProvider) {
             const uniqueKey = this.props.contextProvider.getUniqueKey();
             if (uniqueKey) {
                 const offset = this.props.contextProvider.get(uniqueKey + Constants.CONTEXT_PROVIDER_OFFSET_KEY_SUFFIX);
