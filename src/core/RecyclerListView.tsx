@@ -190,6 +190,7 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
     }
 
     public componentWillUnmount(): void {
+				console.log(`RecyclerListView componentWillUnmount`)
         if (this.props.contextProvider) {
             const uniqueKey = this.props.contextProvider.getUniqueKey();
             if (uniqueKey) {
@@ -209,7 +210,8 @@ export default class RecyclerListView<P extends RecyclerListViewProps, S extends
     }
 
     public componentWillMount(): void {
-        if (this.props.contextProvider) {
+			console.log(`RecyclerListView componentWillMount`)
+			if (this.props.contextProvider) {
             const uniqueKey = this.props.contextProvider.getUniqueKey();
             if (uniqueKey) {
                 const offset = this.props.contextProvider.get(uniqueKey + Constants.CONTEXT_PROVIDER_OFFSET_KEY_SUFFIX);
